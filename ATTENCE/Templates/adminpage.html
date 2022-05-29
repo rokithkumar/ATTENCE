@@ -1,0 +1,143 @@
+<!-- ADMIN PAGE  HTML FILE(adminpage.html)-->
+<!doctype html>
+<html lang="en" dir="rtl">
+	
+<!-- START OF HEAD -->
+<!-- CONTAINS ALL THE REQUIRED RESOURCES AND HAS ATTRIBUTES FOR THE PAGE'S DIMENSIONS AND SCALINGS -->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Rokithkumar">
+	<link rel="stylesheet" href="{{url_for('static',filename='Resources/bootstrap.min.css')}}">
+	<title>ATTENCE</title>
+	<link rel="shortcut icon" href="{{url_for('static',filename='/Resources/favicon.ico')}}">
+	<link rel="stylesheet" href="{{url_for('static',filename='/Resources/style.css')}}">
+</head>
+<!-- END OF HEAD -->
+
+<!-- START OF BODY -->
+<!-- CONTAINS THE ADMIN PAGE WHICH HAS ACESS TO FEW TASKS WHICH HELP IN MANAGING STUDENTS ATTENDANCE -->
+<body>
+	<!-- START OF NAV BAR -->
+	<!-- CONTAINS NAVIGATION BAR AND FEW TABS TO NAVIGATE TO OTHER HTML PAGES -->
+	<section class="header navigation fixed-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<nav class="navbar navbar-expand-lg">
+						<!-- LOGO -->
+						<a class="navbar-brand" href="home"> <img src="{{url_for('static',filename='Resources/logo.png')}}" 
+							alt="logo"> </a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" 
+						aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"> 
+						<span class="tf-ion-android-menu"></span> </button>
+						<div class="collapse navbar-collapse" id="navigation">
+							<ul class="navbar-nav ml-auto">
+								<li class="nav-item"> <a class="nav-link" href="update">Updates</a> </li>
+								<li class="nav-item"> <a class="nav-link" href="admin">Admin</a> </li>
+								<li class="nav-item"> <a class="nav-link" href="student">Student</a> </li>
+								<li class="nav-item"> <a class="nav-link" href="attendance">Attendance</a> </li>
+								<li class="nav-item"> <a class="nav-link" href="home">Home</a> </li>
+							</ul>
+						</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- END OF NAV BAR -->
+
+  <!-- START OF SECTION 1 -->
+	<section>
+		<div class="hero-area">
+			<div class="container">
+				<div class="row justify-content-md-center">
+          <!-- START OF OPERATION-1: ADDS NEW STUDENTS TO THE APPLICATION-->
+          <!-- BASICALLY IT IS A FORM TO UPLOAD THE STUDENT PHOTO -->
+					<div class="col-lg-6" style="margin:top ;">
+						<div class="block">
+							<h1>Add a New Student</h1>
+							<form id="contact-form" action="{{ url_for('upload') }}" role="form" target="_blank">
+								<button type="submit" class="btn btn-main-sm">Add</button>
+							</form>
+						</div>
+					</div>
+          <!-- END OF OPERATION-1: ADDS NEW STUDENTS TO THE APPLICATION-->
+
+          <!-- START OF OPERATION-2: SHOWS ATTENDANCE OF AN PARTICULAR STUDENT-->
+          <!-- CLICKING THE SHOW BUTTON IT NAVIGATES TO STUDENT HTML PAGE(student.html) WHERE STUDENTS CAN
+          CHECK THEIR ATTENDANCE SO CAN THE ADMIN -->
+					<div class="col-lg-6" style="margin: auto;">
+						<div class="block">
+							<h1>Show Attendance of a Student</h1>
+							<form action="{{ url_for('student') }}" target="_blank">
+								<button type="submit" class="btn btn-main-sm">Show</button>
+							</form>
+						</div>
+					</div>
+          <!-- END OF OPERATION-2: SHOWS ATTENDANCE OF AN PARTICULAR STUDENT-->
+
+				</div>
+			</div>
+		</div>
+	</section>
+  <!-- END OF SECTION 1 -->
+
+  <!-- START OF SECTION 2 -->
+  <!-- CONTAINS OPERATION-3: SHOWS ATTENDANCE RECORDS FOR A PARTICULAR DATE TAKING DATE AS INPUT FROM
+  USER USING HTML FORM -->
+	<section class="hero-area">
+		<div class="container">
+			<div class="row justify-content-md-center">
+				<div class="col-lg-6" style="margin: top;">
+					<div class="block">
+						<h1>Enter the Date</h1>
+						<form action="{{ url_for('adminresult') }}" method="post">
+							<button type="submit" class="btn btn-main-sm">Show</button>
+							<input required type="date" class="text-center" class="form-control" name="date"></input>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+  <!-- END OF SECTION 2 -->
+
+	<!-- START OF FOOTER SECTION -->
+	<footer id="footer" class="bg-one">
+		<div class="top-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+						<h3>Technology Used</h3>
+						<p>Face Recognition<br>Database<br>Web Development</p>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+						<h3>Quick Links</h3>
+						<ul>
+							<li><a href="#">Contact</a></li>
+							<li><a href="#">Report</a></li>
+							<li><a href="#">Ask Us</a></li>
+							<li><a href="#">Feedback</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+						<h3>Instructions</h3>
+						<p>Attendance Tab: Starts Marking the Attendance of Students
+							<br> Stundent Tab: To View Your Attendance Records Please Click on Student Tab
+							<br> </p>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+						<h3>About</h3>
+						<p>Hello! Welcome to ATTENCE, this Application is an Automated Face Detecting Attendance Marking
+						 Application</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<h5>Designed by Rokithkumar</h5> </div>
+	</footer>
+	<!-- END OF FOOTER SECTION -->
+</body>
+<!-- END OF BODY  -->
+</html>

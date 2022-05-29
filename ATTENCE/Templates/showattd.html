@@ -1,0 +1,164 @@
+<!-- ATTENDANCE RESULT PAGE HTML FILE(showattd.html)-->
+<!doctype html>
+<html lang="en" dir="rtl">
+	
+<!-- START OF HEAD -->
+<!-- CONTAINS ALL THE REQUIRED RESOURCES AND HAS ATTRIBUTES FOR THE PAGE'S DIMENSIONS AND SCALINGS -->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Rokithkumar">
+	<link rel="stylesheet" href="{{url_for('static',filename='Resources/bootstrap.min.css')}}">
+	<title>ATTENCE</title>
+	<link rel="shortcut icon" href="{{url_for('static',filename='/Resources/favicon.ico')}}">
+	<link rel="stylesheet" href="{{url_for('static',filename='/Resources/style.css')}}">
+	<!-- CONTAINS THE RESOURCES AND THE TEMPLATE OF THE PIE CHART-->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+	google.charts.load("current", {
+		packages: ["corechart"]
+	});
+	google.charts.setOnLoadCallback(drawChart);
+	function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+    {% for key, value in data.items() %}
+    {% if value is string %}
+    ['{{ key }}', '{{ value }}'],
+    {% else %}
+    ['{{ key }}', {{ value }}],
+    {% endif %}
+    {% endfor %}
+    ]);
+    var options = {
+      title: 'Attendance Statistics',
+      fontSize: 25,
+      is3D: true,
+    };
+    var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+    chart.draw(data, options);
+  }
+</script>
+</head>
+<!-- END OF HEAD -->
+
+<!-- START OF BODY -->
+<!-- CONATINS THE RESULTS ASKED IN THE ADMIN PAGE RELATED TO MANAGING STUDENTS ATTENDANCE -->
+<body>
+	<!-- START OF NAV BAR -->
+	<!-- CONTAINS NAVIGATION BAR AND FEW TABS TO NAVIGATE TO OTHER HTML PAGES -->
+	<section class="header navigation fixed-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<nav class="navbar navbar-expand-lg">
+						<!-- LOGO -->
+						<a class="navbar-brand" href="home"> <img src="{{url_for('static',filename='Resources/logo.png')}}"
+						 alt="logo"> </a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation"
+						aria-expanded="false" aria-label="Toggle navigation"> <span class="tf-ion-android-menu"></span> </button>
+						<div class="collapse navbar-collapse" id="navigation">
+							<ul class="navbar-nav ml-auto">
+								<li class="nav-item"> <a class="nav-link" href="update">Updates</a> </li>
+								<li class="nav-item"> <a class="nav-link" href="admin">Admin</a> </li>
+								<li class="nav-item"> <a class="nav-link" href="student">Student</a> </li>
+								<li class="nav-item"> <a class="nav-link" href="attendance">Attendance</a> </li>
+								<li class="nav-item"> <a class="nav-link" href="home">Home</a> </li>
+							</ul>
+						</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- END OF NAV BAR -->
+
+	<!-- START OF SECTION 1-->
+	<section class="hero-area text-center d-flex align-items-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="block">
+						<!-- CONATINS THE ATTENDANCE OF A PARTICULAR STUDENT, DATA RECEIVED FROM App.py -->
+						<h1>Attendance Records of {{n}}-{{r}} </h1>
+						<h3>Here is your Attendance</h3>
+						<h4>Total Working Days: {{t}}<br>Total Present: {{p}}&nbspTotal Absent: {{a}}<br></h4>
+						<br>
+						<br> </div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- END OF SECTION 1 -->
+
+	<!-- START OF SECTION 2-->
+	<section class="hero-area">
+		<div class="container">
+			<div class="row justify-content-md-center">
+				<div class="col-lg-3" style="margin:top ;">
+					<!-- CONTAINS THE TABLE WHICH DEPICTS THE DATE AND STATUS OF THE ABOVE GIVEN STUDENT-->
+					<div class="table align-items-center">
+						<div class="item">
+							<table class="table" border="1">
+								<tr>
+									<th>Status</th>
+									<th>Date</th>
+								</tr> {% for key,value in sumry.items() %}
+								<tr>
+									<td>{{ value }}</td>
+									<td>{{ key }}</td>
+								</tr> {% endfor %} </table>
+						</div>
+					</div>
+				</div>
+				<!-- CONTAINS THE PIE CHART FOR THE PRESENT AND ABSENT QUANTITES OF THAT STUDENT-->
+				<div class="col-lg-9" style="margin: auto;">
+					<div class="block">
+						<div class="fa fa-align-left" aria-hidden="true" id="piechart_3d" 
+						style="width: 900px; height: 500px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- END OF SECTION 2 -->
+	
+	<!-- START OF FOOTER SECTION -->
+	<footer id="footer" class="bg-one">
+		<div class="top-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+						<h3>Technology Used</h3>
+						<p>Face Recognition
+							<br>Database
+							<br>Web Development</p>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+						<h3>Quick Links</h3>
+						<ul>
+							<li><a href="#">Contact</a></li>
+							<li><a href="#">Report</a></li>
+							<li><a href="#">Ask Us</a></li>
+							<li><a href="#">Feedback</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+						<h3>Instructions</h3>
+						<p>Attendance Tab: Starts Marking the Attendance of Students
+							<br> Stundent Tab: To View Your Attendance Records Please Click on Student Tab
+							<br> </p>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+						<h3>About</h3>
+						<p>Hello! Welcome to ATTENCE, this Application is an Automated Face
+						 Detecting Attendance Marking Application</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<h5>Designed by Rokithkumar</h5> </div>
+	</footer>
+	<!-- END OF FOOTER SECTION -->
+</body>
+<!-- END OF BODY  -->
+</html>

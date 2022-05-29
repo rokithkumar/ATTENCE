@@ -1,0 +1,73 @@
+<!-- DISPAY PAGE  HTML FILE(display.html)-->
+<!doctype html>
+<html lang="en" dir="rtl">
+
+<!-- START OF HEAD -->
+<!-- CONTAINS ALL THE REQUIRED RESOURCES AND HAS ATTRIBUTES FOR THE PAGE'S DIMENSIONS AND SCALINGS -->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Rokithkumar">
+	<link rel="stylesheet" href="{{url_for('static',filename='Resources/bootstrap.min.css')}}">
+	<title>ATTENCE</title>
+	<link rel="shortcut icon" href="{{url_for('static',filename='/Resources/favicon.ico')}}">
+	<link rel="stylesheet" href="{{url_for('static',filename='/Resources/style.css')}}"> </head>
+<!-- END OF HEAD -->
+
+<!-- START OF BODY -->
+<!-- WORKS AS AN TEMPLATE WHEN AN ERROR OCCUR THE APPROPRIATE MESSAGE IS SENT FROM App.py  AND THAT 
+MESSAGES ARE PLACED IN THE PAGE AND DISPLAYED ACCORDINGLY, SO IT IS BASICALLY AN ERROR OCCURED PAGE -->
+<body>
+	<section class="page-404 text-center d-flex align-items-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>{{e}}</h1>
+					<h2>{{d}}</h2>
+					<p>{{r}}</p> <a href="home" class="btn btn-main mt-20">Go Home</a> </div>
+			</div>
+		</div>
+	</section>
+	<!-- END OF BODY-->
+
+	<!-- START OF FOOTER SECTION -->
+	<footer id="footer" class="bg-one">
+		<div class="top-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+						<h3>Technology Used</h3>
+						<p>Face Recognition
+							<br>Database
+							<br>Web Development</p>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+						<h3>Quick Links</h3>
+						<ul>
+							<li><a href="#">Contact</a></li>
+							<li><a href="#">Report</a></li>
+							<li><a href="#">Ask Us</a></li>
+							<li><a href="#">Feedback</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+						<h3>Instructions</h3>
+						<p>Attendance Tab: Starts Marking the Attendance of Students
+							<br> Stundent Tab: To View Your Attendance Records Please Click on Student Tab
+							<br> </p>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+						<h3>About</h3>
+						<p>Hello! Welcome to ATTENCE, this Application is an Automated Face Detecting 
+            Attendance Marking Application</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<h5>Designed by Rokithkumar</h5> </div>
+	</footer>
+	<!-- END OF FOOTER SECTION -->
+</body>
+<!-- END OF BODY  -->
+</html>
