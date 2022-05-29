@@ -6,7 +6,7 @@ Marking Attendance is a tedious task when done manually. Welcome to Attence, thi
 
 ## Features
 * Automated Attendance Tracking
-* View Attendance Records
+* Track Attendance Records
 * Graphical Representations of Attendance Records
 * Admin Portal
 
