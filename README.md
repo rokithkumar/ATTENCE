@@ -80,7 +80,7 @@ For complete information about MySQL Configuration please download this [PDF fil
 ```
 6. Use CTRL + Click the http://127.0.0.1:5000 this will open a brower or manually enter URL- http://127.0.0.1:5000/ in any of your browsers.
 7. There you go, You have the Cover page of the ATTENCE Web Application in Front of you.
-8. Explore more by navigating to all the available tabs, you can refer this [File](https://drive.google.com/file/d/1YmPsIJM3PCbtMz4i9zIwpm-vNDWGnlp0/view) to understand the architecture flow of the Web Appliction.
+8. Explore more by navigating to all the available tabs, you can refer this [File](https://drive.google.com/file/d/1YmPsIJM3PCbtMz4i9zIwpm-vNDWGnlp0/view) to understand the architecture flow of the Web Application.
 
 ## Future Works
 Face Detection can be spoofed by placing a photo of a person or an image in an mobile in front of the camera. Doing so even the absentees can get marked present   by their classmates. To avoid this we can deploy Liveliness-Test which uses Machine Learning to check whether the face detected is Real or Fake. You can read moreabout the same from this [article.](https://pyimagesearch.com/2019/03/11/liveness-detection-with-opencv/)
