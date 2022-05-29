@@ -61,7 +61,7 @@ Run the following commands in the MySQL Command Line Client
 ```
 For complete information about MySQL Configuration please download this [PDF file](https://drive.google.com/file/d/1mx0s8rqFPvdBk5GFXLMuXOAWUlSJhwIg/view)
 
-## Studtents List Configuration
+## Students List Configuration in the Application
 Gather all the pictures of the required persons and name them as Regno-Name for example BE203-Rokith. And Save it to the StudentPhotos Folder
 
 ## How to Run the Program
