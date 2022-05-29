@@ -177,7 +177,7 @@ def gen():
         newimg=cv2.resize(img,(0,0),None,0.25,0.25)
         newimg=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
 
-        #Check every alternate frame or frame number which is even
+        #Check every alternate frame or frame number
         if cur_frame:
             list_faceloc=face_locations(newimg)
             list_faceencod=face_encodings(newimg,list_faceloc)
