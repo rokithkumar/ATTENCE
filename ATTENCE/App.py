@@ -15,7 +15,6 @@ import face_recognition
 import os
 import datetime
 import mysql.connector
-from sqlalchemy import true
 
 #Makes connection with mysql attendance database and inserts all the given parameters in the table markattd
 def mysqlinsert(regno,name,date,time,status):
