@@ -1,0 +1,85 @@
+/* This CSS File (home.css) is for the Sytling of the Animations and the text colors for Cover Page(cover.html)
+and for Home Page(index.html) */
+
+
+/*--------- START of  Cover Page Background Color and Animation--------- */
+.firstbody {
+  background: linear-gradient(-45deg,#0000,#1f2532,#484848 );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/*--------- END of  Cover Page Background Color and Animation--------- */
+
+/*--------- START of  Cover Page Heading Color and Animation--------- */
+.first h1{
+color: #fff;
+font-size: 200px;
+font-weight: bold;
+font-family: "Titillium Web", sans-serif;
+cursor: pointer
+}
+.first h1 span{
+font-size: 150px;;
+transition: .5s linear
+}
+.first h1:hover span:nth-child(1){
+margin-right: 0px;
+}
+.first h1:hover span:nth-child(1):after{
+content: "DAN";
+}
+.first h1:hover span{
+color: #fff;
+text-shadow:   0 0 20px #0000,
+            0 0 40px #484848;
+}
+
+h2{
+color: #fff;
+}
+
+/*--------- END of  Cover Page Heading Color and Animation--------- */
+
+/*--------- START of  Home Page Heading Color and Animation--------- */
+.animate-charcter
+{
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #1f2532 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #f0326b 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 190px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+/*--------- END of  Home Page Heading Color and Animation--------- */
