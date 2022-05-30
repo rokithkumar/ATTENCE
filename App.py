@@ -125,7 +125,7 @@ def gen():
     def MarkAbsent():
         mydb=mysql.connector.connect(host="localhost",user="root",passwd="Rokith@1234",database="attendance")
         mycursor=mydb.cursor()
-        now=datetime.datetime.today()-datetime.timedelta(days=3)
+        now=datetime.datetime.today()-datetime.timedelta(days=1)
         fordate=now.strftime('%d-%m-%y')
         t=localtime()
         current_time = strftime("%H:%M:%S",t)
