@@ -1,7 +1,10 @@
 # ATTENCE
 Automated Face Detecting Attendance Marking Web Application
-
+                        
+<img align="right"  alt="ATTENCE-logo" src="https://user-images.githubusercontent.com/75007002/173594644-d01ad716-c98f-47bf-83fa-38af22a9abb2.png">                        
+                                                                                                                                          
 ### About
+
 Marking Attendance is a tedious task when done manually. Welcome to Attence, this is a Web Application helps to keep track of Attendance of Students using Face Detection. 
 
 ## Features
@@ -64,6 +67,13 @@ For complete information about MySQL Configuration please download this [PDF fil
 ## Students List Configuration in the Application
 Gather all the pictures of the required persons and name them as Regno-Name for example BE203-Rokith. And Save it to the StudentPhotos Folder
 
+## Admin Login Credentials
+Please Enter the following credentials to access the Admin Portal of the Application
+```
+  Username: admin
+  Password: 1234
+```
+
 ## How to Run the Program
 1. Install ATTENCE Folder
 2. Open Compiler
@@ -84,6 +94,23 @@ Gather all the pictures of the required persons and name them as Regno-Name for 
 6. Use CTRL + Click the http://127.0.0.1:5000 this will open a brower or manually enter URL- http://127.0.0.1:5000/ in any of your browsers.
 7. There you go, You have the Cover page of the ATTENCE Web Application in Front of you.
 8. Explore more by navigating to all the available tabs, you can refer this [File](https://drive.google.com/file/d/1YmPsIJM3PCbtMz4i9zIwpm-vNDWGnlp0/view) to understand the architecture flow of the Web Application.
+
+## User Interface
+
+Website Cover Page
+https://user-images.githubusercontent.com/75007002/173594410-a888cbde-ee18-4266-b242-9ee9770fd16c.mp4
+
+Website Home Page
+https://user-images.githubusercontent.com/75007002/173594468-6b634bef-16ef-4ed7-9e6f-53087ac8e546.mp4
+
+Admin Login Page
+![Admin Login](https://user-images.githubusercontent.com/75007002/173593402-c1d2b9a6-259c-47d3-b4d6-8f7a6b19aef4.png)
+
+Attendance Tracking Page for Admin
+![Attendace Date Admin](https://user-images.githubusercontent.com/75007002/173593664-0688238f-f1c9-42fb-b7de-9abc4ab3d02a.png)
+
+Attendance Tracking Page for Student
+![Attendance Student](https://user-images.githubusercontent.com/75007002/173593781-5aab2db6-2793-4544-b862-e83986f9c569.png)
 
 ## Future Works
 Face Detection can be spoofed by placing a photo of a person or an image in an mobile in front of the camera. Doing so even the absentees can get marked present   by their classmates. To avoid this we can deploy Liveliness-Test which uses Machine Learning to check whether the face detected is Real or Fake. You can read moreabout the same from this [article.](https://pyimagesearch.com/2019/03/11/liveness-detection-with-opencv/)
