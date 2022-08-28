@@ -103,6 +103,9 @@ https://user-images.githubusercontent.com/75007002/173594410-a888cbde-ee18-4266-
 Website Home Page
 https://user-images.githubusercontent.com/75007002/173594468-6b634bef-16ef-4ed7-9e6f-53087ac8e546.mp4
 
+Cover Page
+![Cover](https://user-images.githubusercontent.com/75007002/187085351-e21c0025-10f1-4388-8d0f-9d07dbb392f8.png)
+
 Admin Login Page
 ![Admin Login](https://user-images.githubusercontent.com/75007002/173593402-c1d2b9a6-259c-47d3-b4d6-8f7a6b19aef4.png)
 
