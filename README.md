@@ -95,6 +95,9 @@ Please Enter the following credentials to access the Admin Portal of the Applica
 7. There you go, You have the Cover page of the ATTENCE Web Application in Front of you.
 8. Explore more by navigating to all the available tabs, you can refer this [File](https://drive.google.com/file/d/1YmPsIJM3PCbtMz4i9zIwpm-vNDWGnlp0/view) to understand the architecture flow of the Web Application.
 
+## Project Demo Video
+[Video Link](https://drive.google.com/file/d/1Fq2VTwSbZVNx-WZdCCgcBQqSTAN29Req/view?usp=sharing)
+
 ## User Interface
 
 Website Cover Page
